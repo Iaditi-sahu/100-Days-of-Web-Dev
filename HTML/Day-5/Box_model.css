@@ -1,0 +1,10 @@
+em, strong {
+    background-color: #B2D6FF;    /* Light blue */
+    display: inline;
+  }
+  h1, p {
+    background-color: #DDE0E3;    /* Light gray */
+  }
+  p {
+    padding: 20px 10px;  /* Vertical  Horizontal */
+  }
