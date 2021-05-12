@@ -98,3 +98,15 @@ body{
 
 
 }
+.legacy-form-row {
+    border: none;
+    margin-bottom: 40px;
+}
+
+.legacy-form-row legend{
+    margin-bottom: 15px;
+}
+
+.legacy-form-row .radio-label{
+    display: ;
+}
