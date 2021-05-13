@@ -231,3 +231,22 @@ strong {
     border-left: none;
   }
 }
+figcaption {
+  display: none;
+}
+@media only screen and (min-width: 900px) {
+  figure {
+    position: relative;
+  }
+  figcaption {
+    display: block;
+
+    font-style: italic;
+    text-align: right;
+    background-color: #FFFFFF;
+
+    position: absolute;
+    left: -220px;
+    width: 200px;
+  }
+}
