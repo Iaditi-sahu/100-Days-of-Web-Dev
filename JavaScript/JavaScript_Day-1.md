@@ -39,3 +39,31 @@ let – is a modern variable declaration.
 var – is an old-school variable declaration. Normally we don’t use it at all, but we’ll cover subtle differences from let in the chapter The old "var", just in case you need them.
 const – is like let, but the value of the variable can’t be changed.
 Variables should be named in a way that allows us to easily understand what’s inside them.
+
+# Data-type
+We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
+let msg = 'hello';
+msg = 56789;
+
+String
+A string in JavaScript must be surrounded by quotes.
+
+let str = "Hello";
+let str2 = 'Single quotes are ok too';
+let phrase = `can embed another ${str}`;
+In JavaScript, there are 3 types of quotes.
+
+Double quotes: "Hello".
+Single quotes: 'Hello'.
+Backticks: `Hello`.
+Double and single quotes are “simple” quotes. There’s practically no difference between them in JavaScript.
+
+Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}, for example.
+let name = "John";
+
+// embed a variable
+alert( `Hello, ${name}!` ); // Hello, John!
+
+// embed an expression
+alert( `the result is ${1 + 2}` ); // the result is 3
+
