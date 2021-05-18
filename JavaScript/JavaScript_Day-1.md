@@ -40,7 +40,7 @@ var – is an old-school variable declaration. Normally we don’t use it at all
 const – is like let, but the value of the variable can’t be changed.
 Variables should be named in a way that allows us to easily understand what’s inside them.
 
-* Data-type
+# Data-type
 We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
 let msg = 'hello';
 msg = 56789;
