@@ -45,7 +45,18 @@ We can put any type in a variable. For example, a variable can at one moment be 
 let msg = 'hello';
 msg = 56789;
 
-String
+* Numbers
+The number type represents both integer and floating point numbers.
+
+There are many operations for numbers, e.g. multiplication *, division /, addition +, subtraction -, and so on.
+
+Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: Infinity, -Infinity and NaN.
+
+In JavaScript, the “number” type cannot represent integer values larger than (2^53-1) (that’s 9007199254740991), or less than -(2^53-1) for negatives. It’s a technical limitation caused by their internal representation.
+
+**Right now, BigInt is supported in Firefox/Chrome/Edge/Safari, but not in IE.
+
+* String
 A string in JavaScript must be surrounded by quotes.
 
 let str = "Hello";
@@ -67,3 +78,67 @@ alert( `Hello, ${name}!` ); // Hello, John!
 // embed an expression
 alert( `the result is ${1 + 2}` ); // the result is 3
 
+* Boolean
+As in other language Js booleans also hold true and false value.
+
+* Null
+In JavaScript, null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
+
+It’s just a special value which represents “nothing”, “empty” or “value unknown”.
+
+* Undefined
+The special value undefined also stands apart. It makes a type of its own, just like null.
+
+The meaning of undefined is “value is not assigned”.
+
+*let age = 100;
+ age = undefined; 
+ alert(age);*
+
+* object
+The object type is special.
+
+All other types are called “primitive” because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+
+Being that important, objects deserve a special treatment. We’ll deal with them later in the chapter Objects, after we learn more about primitives.
+
+The symbol type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.
+
+* Summary
+There are 8 basic data types in JavaScript.
+
+number for numbers of any kind: integer or floating-point, integers are limited by ±(253-1).
+bigint is for integer numbers of arbitrary length.
+string for strings. A string may have zero or more characters, there’s no separate single-character type.
+boolean for true/false.
+null for unknown values – a standalone type that has a single value null.
+undefined for unassigned values – a standalone type that has a single value undefined.
+object for more complex data structures.
+symbol for unique identifiers.
+The typeof operator allows us to see which type is stored in a variable.
+
+Two forms: typeof x or typeof(x).
+Returns a string with the name of the type, like "string".
+For null returns "object" – this is an error in the language, it’s not actually an object.
+
+# Interaction: alert, prompt, confirm.
+* alert
+This one we’ve seen already. It shows a message and waits for the user to press “OK”.
+
+alert('Hey!');
+
+* prompt
+The visitor can type something in the prompt input field and press OK. Then we get that text in the result. Or they can cancel the input by pressing Cancel or hitting the Esc key, then we get null as the result.
+
+The call to prompt returns the text from the input field or null if the input was canceled.
+
+let behave = prompt('How are you', ok);
+alert(`Have a great day hope you are ${behave});
+
+* confirm
+The function confirm shows a modal window with a question and two buttons: OK and Cancel.
+
+The result is true if OK is pressed and false otherwise.
+
+let isPath = confirm('Is there a way');
+alert(isPath);
